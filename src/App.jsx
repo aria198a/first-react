@@ -2,7 +2,7 @@ import './reset.css'
 import './base.scss'
 import icons from './assets/icons/icons.svg'
 // ---
-import { Header, Main, Footer } from './component'
+import { Header, Main, Footer } from './components'
 // ---
 function App () {
   return (
