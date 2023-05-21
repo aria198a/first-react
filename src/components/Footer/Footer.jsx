@@ -1,7 +1,11 @@
+import { useContext } from 'react'
+import { AppContext } from 'context/AppContext'
 import styles from './Footer.module.scss'
-const Footer = ({ icons }) => {
+
+const Footer = () => {
+  const { icons } = useContext(AppContext)
+
   return (
-    <>
       <footer className={styles.siteFooter}>
         <div className={styles.footerContainer}>
           <div className={styles.footerLogoContainer}>
@@ -73,7 +77,6 @@ const Footer = ({ icons }) => {
           </section>
         </div>
       </footer>
-    </>
   )
 }
 

@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { AppContext } from 'context/AppContext'
 import styles from './Header.module.scss'
 
 const navItemList = ['男款', '女款', '最新消息', '客製商品', '聯絡我們']
@@ -11,9 +13,8 @@ const NavItem = ({ item }) => {
   )
 }
 
-const Header = ({ icons }) => {
+const Header = () => {
   return (
-    <>
       <header className={styles.siteHeader}>
         <div className={`${styles.headerContainer} mx-auto`}>
           {/* <!-- navbar-toggle --> */}
@@ -67,7 +68,6 @@ const Header = ({ icons }) => {
           </a>
         </div>
       </header>
-    </>
   )
 }
 

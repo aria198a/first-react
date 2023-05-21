@@ -5,17 +5,16 @@ import Register from './Register/Register'
 import Cart from './Cart/Cart'
 import ProgressControl from './ProgressControl/ProgressControl'
 
-const Main = ({ icons }) => {
+// --
+const Main = () => {
   return (
-    <>
-      <main className='site-main'>
-        <div className='main-container'>
-          <Register icons={icons} />
-          <Cart icons={icons} />
-          <ProgressControl icons={icons} />
-        </div>
-      </main>
-    </>
+    <main className='siteMain'>
+      <div className='mainContainer'>
+        <Register />
+        <Cart />
+        <ProgressControl />
+      </div>
+    </main>
   )
 }
 

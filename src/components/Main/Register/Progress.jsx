@@ -1,9 +1,17 @@
 // import style from "./Main_Register_Progress.module.scss"
 import styles from './Progress.module.scss'
+import { useContext } from 'react'
+import { AppContext } from 'context/AppContext'
+import { MainContext } from 'context/MainContext'
 
-const Step = ({ icons, text, label, dataphase }) => {
+const Step = ({ text, label, dataphase, step }) => {
+  const { icons } = useContext(AppContext)
   return (
-    <span className={styles.progressGroup} dataphase={dataphase}>
+    <span 
+      className={styles.progressGroup} 
+      dataphase={dataphase}
+      step={step}
+    >
       <span className={styles.progressIcon}>
         <span className={styles.text}>{text}</span>
         <svg className={`${styles.icon} cursor-point`}>
@@ -15,20 +23,31 @@ const Step = ({ icons, text, label, dataphase }) => {
   )
 }
 
-const Progress = ({ icons }) => {
+const Progress = () => {
+  const { step } = useContext(MainContext)
   return (
-    <>
       <section className={`${styles.progressContainer} col col-12`}>
         {/* 寄送地址 */}
-        <Step icons={icons} text='1' label='寄送地址' dataphase='address' />
+        <Step 
+          text='1' 
+          label='寄送地址' 
+          dataphase='address' 
+        />
         <span className={styles.progressBar} data-order='1' />
         {/* 運送方式 */}
-        <Step icons={icons} text='2' label='運送方式' dataphase='shipping' />
+        <Step 
+          text='2' 
+          label='運送方式' 
+          dataphase='shipping' 
+        />
         <span className={styles.progressBar} data-order='2' />
         {/* 付款資訊 */}
-        <Step icons={icons} text='3' label='付款資訊' dataphase='credit-card' />
+        <Step 
+          text='3' 
+          label='付款資訊' 
+          dataphase='credit-card' 
+        />
       </section>
-    </>
   )
 }
 
