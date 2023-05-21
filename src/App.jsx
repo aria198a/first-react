@@ -2,9 +2,9 @@ import './reset.css'
 import './base.scss'
 import { AppContextProvier } from 'context/AppContext'
 // ---
-import Header from 'component/Header/Header'
-import Main from 'component/Main/Main'
-import Footer from 'component/Footer/Footer'
+import Header from 'components/Header/Header'
+import Main from 'components/Main/Main'
+import Footer from 'components/Footer/Footer'
 
 // ---
 function App () {

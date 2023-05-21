@@ -5,7 +5,6 @@ import { CartContext } from 'context/CartContext'
 import { MainContext } from 'context/MainContext'
 
 //  ---------------------------------------------------------
-
 const ProductListItem = ({ item }) => {
   const { icons } = useContext(AppContext)
   const { onCartItemsChange } = useContext(CartContext)
@@ -44,7 +43,7 @@ const ProductListItem = ({ item }) => {
 }
 
 const Cart = () => {
-  const { item, count } = useContext(CartContext)
+  const { items, count } = useContext(CartContext)
   const { shippingCost } = useContext(MainContext)
 
   return (
