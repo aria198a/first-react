@@ -4,14 +4,14 @@ import { MainContext } from 'context/MainContext'
 const cartData = [
   {
     id: '1',
-    name: '貓咪罐罐',
+    name: '牛仔褲',
     img: 'https://picsum.photos/300/300?text=1',
     price: 100,
     quantity: 2
   },
   {
     id: '2',
-    name: '貓咪干干',
+    name: '破洞牛仔褲',
     img: 'https://picsum.photos/300/300?text=2',
     price: 200,
     quantity: 1
